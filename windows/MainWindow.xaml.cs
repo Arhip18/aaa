@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp52_практика.windows;
+using WpfApp52_практика.windows.classes;
 
 namespace WpfApp52_практика
 {
@@ -36,6 +37,27 @@ namespace WpfApp52_практика
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void LoginClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var login = LoginBox.Text;
+            var password = ParolBox.Text;
+
+            var context = new AppDbContext();
+
+            var user = context.Users.SingleOrDefault(x => x.Login == login && x.Password== password);
+            if (user is null)
+            {
+                MessageBox.Show("Неправильный логин или пароль");
+                return;
+            }
+            MessageBox.Show("Вы успешно вошли в аккаунт");
         }
     }
 }

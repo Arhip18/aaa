@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp52_практика.windows.classes;
 
 namespace WpfApp52_практика.windows
 {
@@ -29,7 +30,25 @@ namespace WpfApp52_практика.windows
             MainWindow reg = new MainWindow();
             reg.Show();
             this.Hide();
+
+            var Login = LoginBox.Text;
+            var pass = PasswordBox.Text;
+            var Email = EmailBox;
+            var povtor = PovtorBox.Text; 
+            var context = new AppDbContext();
+
+            var user_exist = context .Users.FirstOrDefault(x => x.Login == Login);
+            if (user_exist is not null)
+            {
+                MessageBox.Show ("Такой пользователь уже зарегистрирован");
+                return;
+            }
+            var user = new User { Login = Login, Password = pass };
+            context.Users.Add(user);
+            context.SaveChanges();
+            MessageBox.Show("Welcome to the club, buddy)))");
         }
+        
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {

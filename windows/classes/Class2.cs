@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace WpfApp52_практика.windows.classes
 {
@@ -13,7 +15,7 @@ namespace WpfApp52_практика.windows.classes
         public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLlocalDB;Initial Catalog=Mulgachev;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
+            optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = userDb; Integrated Security = True; Connect Timeout = 30; Encrypt = False; Trust Server Certificate = False; Application Intent = ReadWrite; Multi Subnet Failover = False");
         }
     }
 }

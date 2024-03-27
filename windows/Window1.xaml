@@ -8,15 +8,15 @@
         Title="Авторизация" Height="450" Width="800" Background="AntiqueWhite" Closing="Window_Closing">
     <Grid>
         <Canvas>
-            <TextBox Name="Email" Width="280" Height="30" Canvas.Bottom="350" Canvas.Right="290" Background="White"/>
-            <TextBox Name="Login" Width="280" Height="30" Canvas.Bottom="280" Canvas.Right="290" Background="White"/>
-            <TextBox Name="Password" Width="280" Height="30" Canvas.Bottom="210" Canvas.Right="290" Background="White"/>
-            <TextBox Name="povtor" Width="280" Height="30" Canvas.Bottom="140" Canvas.Right="290" Background="White"/>
-            <Button Content="Зарегистривоваться" HorizontalAlignment="Center" FontSize="15" Background="White" Canvas.Bottom="80" Canvas.Right="350" Width="150" Height="30" Click="Button_Click"/>
-            <Image Source="C:\Users\student\Desktop\WpfApp52 практика\windows\images\free-icon-mail-646094.png" Width="50" Height="50" Canvas.Bottom="340" Canvas.Left="150"/>
-            <Image Source="C:\Users\student\Desktop\WpfApp52 практика\windows\images\free-icon-profile-1250689.png" Width="50" Height="50" Canvas.Bottom="270" Canvas.Right="585"/>
-            <Image Source="C:\Users\student\Desktop\WpfApp52 практика\windows\images\free-icon-padlock-2575570.png" Width="50" Height="50" Canvas.Bottom="200" Canvas.Left="148"/>
-            <Image Source="C:\Users\student\Desktop\WpfApp52 практика\windows\images\free-icon-shield-15080032.png" Width="50" Height="50" Canvas.Bottom="130" Canvas.Left="148"/>
+            <TextBox Name="EmailBox" Width="280" Height="30" Canvas.Bottom="350" Canvas.Right="290" Background="White"/>
+            <TextBox Name="LoginBox" Width="280" Height="30" Canvas.Bottom="280" Canvas.Right="290" Background="White"/>
+            <TextBox Name="PasswordBox" Width="280" Height="30" Canvas.Bottom="210" Canvas.Right="290" Background="White"/>
+            <TextBox Name="PovtorBox" Width="280" Height="30" Canvas.Bottom="140" Canvas.Right="290" Background="White"/>
+            <Button Name="ZaregBox" Content="Зарегистривоваться" HorizontalAlignment="Center" FontSize="15" Background="White" Canvas.Bottom="80" Canvas.Right="350" Width="150" Height="30" Click="Button_Click"/>
+            <Image Source="C:\Users\student\Desktop\aaa\windows\images\free-icon-mail-646094.png" Width="50" Height="50" Canvas.Bottom="340" Canvas.Left="150"/>
+            <Image Source="C:\Users\student\Desktop\aaa\windows\images\free-icon-profile-1250689.png" Width="50" Height="50" Canvas.Bottom="270" Canvas.Right="585"/>
+            <Image Source="C:\Users\student\Desktop\aaa\windows\images\free-icon-padlock-2575570.png" Width="50" Height="50" Canvas.Bottom="200" Canvas.Left="148"/>
+            <Image Source="C:\Users\student\Desktop\aaa\windows\images\free-icon-shield-15080032.png" Width="50" Height="50" Canvas.Bottom="130" Canvas.Left="148"/>
         </Canvas>
     </Grid>
 </Window>
